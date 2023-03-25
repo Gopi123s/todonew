@@ -1,0 +1,24 @@
+{% extends 'todoapp/base.html' %}
+
+
+{% block body %}
+<div class="header-bar">
+Registration
+</div>
+
+<div class="card-body">
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="">{{form.username.label}}</label>
+    {{form.username}}
+    <label for="">{{form.password1.label}}</label>
+    {{form.password1}}
+    <label for="">{{form.password2.label}}</label>
+    {{form.password2}}
+    <!-- {{form.as_p}} -->
+    <button type="submit" class="button mt-2"> Register</button>
+</form>
+<p>Already have an account <a href="{% url 'login' %}">Login</a></p>
+</div>
+
+{% endblock %}

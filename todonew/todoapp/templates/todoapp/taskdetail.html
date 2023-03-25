@@ -1,0 +1,17 @@
+{% extends 'todoapp/base.html' %}
+
+
+{% block body %}
+
+<h2>
+    {{task_detail.user}}
+</h2>
+<h2>
+    {{task_detail.title}}
+</h2>
+<h2>
+    {{task_detail.description}}
+</h2>
+<a href="{% url 'home'%}"> back</a>
+
+    {% endblock %}
